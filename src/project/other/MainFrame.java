@@ -80,7 +80,7 @@ public class MainFrame {
     }
 
     private String[] getFileNames() {
-        String dataPath = "C:\\Users\\Modeling\\data\\";
+        String dataPath = "src/project/other/data";
         File dir = new File(dataPath);
         File[] dataFiles = dir.listFiles();
         String[] fileNames = new String[dataFiles.length];
@@ -112,7 +112,7 @@ public class MainFrame {
         runModelButton.addActionListener(e -> {
             String chosenModel = this.leftList.getSelectedValue();
             String chosenData = this.rightList.getSelectedValue();
-            String dataFilePath = "C:\\Users\\Modeling\\data\\" + chosenData;
+            String dataFilePath = "src/project/other/data/" + chosenData;
 
             try {
                 Controller controller = new Controller("project.other.Models." + chosenModel);
